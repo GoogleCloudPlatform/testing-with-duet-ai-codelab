@@ -29,3 +29,7 @@ def convert():
     number = request.form["number"]
     roman = calendar.number_to_roman(number)
     return render_template("convert.html", number=number, roman=roman)
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
